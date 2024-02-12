@@ -9,9 +9,9 @@ function App() {
   const [puppies, setPuppies] = useState(puppyList)
   const [featPupId, setFeatPupId] = useState(null)
 
-  function handleClick() {
-    // some logic here
-  }
+  // function handleClick() {
+  //   // some logic here
+  // }
 
   const featuredPup = puppies.find((pup)=> pup.id === featPupId)
 
@@ -31,10 +31,11 @@ function App() {
     {featPupId && (
         <div>
           <h2>{featuredPup.name}</h2>
-          <p>Age: {featuredPup.age}</p>
-          <p>Email: {featuredPup.email}</p>
-          <p>ID: {featPupId}</p>
-          
+          <ul>
+          <li>Age: {featuredPup.age}</li>
+          <li>Email: {featuredPup.email}</li>
+          <li>ID: {featPupId}</li>
+          </ul>
           </div>
       )}
       </div>
